@@ -3,5 +3,5 @@ spring:
     name: selfservice-use
   cloud:
     config:
-      uri:  http://my-config:9004/
+      uri:  http://my-config:9005/
       profile: test
