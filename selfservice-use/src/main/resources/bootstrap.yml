@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: selfservice-use
+  cloud:
+    config:
+      uri:  http://my-config:9004/
+      profile: test

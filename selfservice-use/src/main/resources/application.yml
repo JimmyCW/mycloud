@@ -1,8 +1,10 @@
+server:
+  port: 9003
+
 spring:
   application:
     name: 'selfservice-user'
-server:
-  port: 9003
+
 eureka:
   client:
     serviceUrl:
