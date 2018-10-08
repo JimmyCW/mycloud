@@ -1,15 +1,11 @@
-server:
-  port: 9002
 spring:
   application:
-    name: micro-ribbon
+    name: 'selfservice-user'
+server:
+  port: 9003
 eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery:8761/eureka/
   instance:
     preferIpAddress: true
-feign:
-  hystrix:
-    enabled: true
-
