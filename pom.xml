@@ -16,6 +16,7 @@
         <module>microservice-ribbon</module>
         <module>selfservice-use</module>
         <module>my-config</module>
+        <module>my-service</module>
     </modules>
 
     <parent>
