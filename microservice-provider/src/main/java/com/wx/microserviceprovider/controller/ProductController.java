@@ -28,6 +28,7 @@ public class ProductController {
     @GetMapping("getByName")
     public Product getByName(@RequestParam String productName) {
         Product product = productDao.findByName(productName);
+        log.info("product = " + JSONObject.toJSONString(product));
         return product;
     }
 

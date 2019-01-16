@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true"> 
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd.HH:mm:ss.SSS} [%-16t] %-5p %-22c{0} %X{ServiceId} - %m%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender"> 
+                <destination>localhost:4560</destination>  
+        <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder">
+            <customFields>{"projectName":"foc"}</customFields>
+        </encoder>
+    </appender>
+    <logger name="behaviorRecordLog" level="INFO" additivity="true">
+        <appender-ref ref="LOGSTASH"/>
+    </logger>
+    <root level="INFO"> 
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>
