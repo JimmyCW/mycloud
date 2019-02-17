@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import org.springframework.data.elasticsearch.annotations.Document;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -16,7 +15,7 @@ import java.util.Date;
 @Document(indexName = "notice", type = "doc")
 public class Notice {
 
-    @("id")
+    @JsonProperty("id")
     private Long id;
 
     @JsonProperty("title")

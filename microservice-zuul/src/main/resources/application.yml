@@ -1,0 +1,22 @@
+
+server:
+  port: 9007
+
+spring:
+  application:
+    name: micro-zuul
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/
+  instance:
+    preferIpAddress: true
+
+zuul:
+  routes:
+    myservice.serviceId: micro-provider
+    myservice.path: /mp/**
+  ignore-service: "*"
+  prefix: /wx #统一前缀
+ #    http://localhost:9007/micro-provider/product/getByName?productName=1
+#    http://localhost:9007/mp/product/getByName?productName=1
