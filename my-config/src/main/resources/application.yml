@@ -8,7 +8,9 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/JimmyCW/mycloud/     # 配置git仓库的地址
-          search-paths: repo-config                             # git仓库地址下的相对地址，可以配置多个，用,分割。
-          username: jimmywei19@163.com                                        # git仓库的账号
-          password: 41689583wei                          # git仓库的密码
+          uri: https://github.com/JimmyCW/mycloud-config.git
+# 配置git仓库的地址 跟你clone过来的地址有关 git方式填git@git... https方式填https
+# http://localhost:9005/master/application-dev.yml   address/{label}/application-{profile}.yml
+#          search-paths: repo-config                             # git仓库地址下的相对地址，可以配置多个，用,分割。
+#          username: jimmywei19@163.com                                        # git仓库的账号
+#          password: 41689583wei                          # git仓库的密码
