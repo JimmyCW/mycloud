@@ -1,7 +1,7 @@
 spring:
-  application:
-    name: selfservice-use
   cloud:
     config:
-      uri: http://my-config:9005/
+      name: selfservice-use
+      uri: http://localhost:9005
       profile: test
+      label: master
