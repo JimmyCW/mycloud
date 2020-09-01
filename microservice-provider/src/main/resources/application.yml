@@ -4,8 +4,11 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery:8761/eureka/
+    registry-fetch-interval-seconds: 30
   instance:
     preferIpAddress: true
+    lease-renewal-interval-in-seconds: 10
+
 spring:
   datasource:
     name: localhost_3306
